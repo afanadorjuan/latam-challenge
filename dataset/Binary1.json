@@ -11,6 +11,9 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileSystem": "rawdata"
+			},
+			"compression": {
+				"type": "ZipDeflate"
 			}
 		}
 	}
