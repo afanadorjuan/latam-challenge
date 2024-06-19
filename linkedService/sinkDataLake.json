@@ -1,0 +1,10 @@
+{
+	"name": "sinkDataLake",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://rawlatamdata.dfs.core.windows.net/"
+		}
+	}
+}
