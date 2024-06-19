@@ -16,13 +16,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "JsonSource",
+						"type": "BinarySource",
 						"storeSettings": {
 							"type": "HttpReadSettings",
 							"requestMethod": "GET"
 						},
 						"formatSettings": {
-							"type": "JsonReadSettings"
+							"type": "BinaryReadSettings"
 						}
 					},
 					"sink": {
@@ -38,7 +38,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "JsonSourceDS",
+						"referenceName": "SourceDataDS",
 						"type": "DatasetReference"
 					}
 				],

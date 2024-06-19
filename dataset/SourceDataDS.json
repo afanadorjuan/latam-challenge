@@ -9,10 +9,8 @@
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation"
-			},
-			"compression": {
-				"type": "ZipDeflate"
+				"type": "HttpServerLocation",
+				"relativeUrl": "/uc?id=1ig2ngoXFTxP5Pa8muXo02mDTFexZzsis"
 			}
 		}
 	}
