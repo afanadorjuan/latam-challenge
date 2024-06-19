@@ -1,0 +1,17 @@
+{
+	"name": "SinkDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sinkDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "rawdata"
+			}
+		}
+	}
+}
