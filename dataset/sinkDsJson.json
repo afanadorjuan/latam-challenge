@@ -1,8 +1,8 @@
 {
-	"name": "Json1",
+	"name": "sinkDsJson",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "SourceDsJson",
+			"referenceName": "sinkDataLake",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -11,10 +11,6 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileSystem": "rawdata"
-			},
-			"compression": {
-				"type": "ZipDeflate",
-				"level": "Optimal"
 			}
 		},
 		"schema": {}
