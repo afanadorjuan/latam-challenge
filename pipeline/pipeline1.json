@@ -22,10 +22,7 @@
 							"requestMethod": "GET"
 						},
 						"formatSettings": {
-							"type": "JsonReadSettings",
-							"compressionProperties": {
-								"type": "ZipDeflateReadSettings"
-							}
+							"type": "JsonReadSettings"
 						}
 					},
 					"sink": {
