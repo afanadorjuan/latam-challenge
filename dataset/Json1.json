@@ -2,15 +2,19 @@
 	"name": "Json1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "sinkDataLake",
+			"referenceName": "sourceJsonTweetsDrive",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileSystem": "rawdata"
+				"type": "HttpServerLocation",
+				"relativeUrl": "/uc?id=1ig2ngoXFTxP5Pa8muXo02mDTFexZzsis"
+			},
+			"compression": {
+				"type": "ZipDeflate",
+				"level": "Fastest"
 			}
 		},
 		"schema": {}
