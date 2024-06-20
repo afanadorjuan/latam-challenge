@@ -1,0 +1,19 @@
+{
+	"name": "q1_time",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-2547757622577428.8.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "databricksworkspacesecret"
+			},
+			"existingClusterId": "0619-233222-rjlnjfll"
+		}
+	}
+}
