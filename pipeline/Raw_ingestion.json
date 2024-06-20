@@ -44,7 +44,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Json1",
+						"referenceName": "JsonSourceDS",
 						"type": "DatasetReference"
 					}
 				],

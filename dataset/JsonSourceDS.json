@@ -1,5 +1,5 @@
 {
-	"name": "Json1",
+	"name": "JsonSourceDS",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SourceDsJson",
