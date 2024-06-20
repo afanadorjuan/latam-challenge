@@ -1,0 +1,12 @@
+{
+	"name": "sourceJsonTweetsDrive",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://drive.google.com/uc?export=download&id=1ig2ngoXFTxP5Pa8muXo02mDTFexZzsis",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
