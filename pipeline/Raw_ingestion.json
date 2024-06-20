@@ -50,7 +50,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "sinkDsJson",
+						"referenceName": "sinkJsonDS",
 						"type": "DatasetReference"
 					}
 				]

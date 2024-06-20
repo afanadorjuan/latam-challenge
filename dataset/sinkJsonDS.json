@@ -1,5 +1,5 @@
 {
-	"name": "sinkDsJson",
+	"name": "sinkJsonDS",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "sinkDataLake",
