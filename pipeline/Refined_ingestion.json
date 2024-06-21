@@ -141,7 +141,6 @@
 				}
 			}
 		],
-		"concurrency": 6,
 		"folder": {
 			"name": "Silver"
 		},
