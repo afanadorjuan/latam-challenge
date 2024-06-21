@@ -1,0 +1,18 @@
+{
+	"name": "sinkJsonDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sinkDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "processeddata"
+			}
+		},
+		"schema": {}
+	}
+}
