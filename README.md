@@ -72,6 +72,67 @@ Cada uno de los análisis se realiza a través de funciones específicas, optimi
 5. **Seguridad y Almacenamiento de Credenciales**:
    - Para proteger credenciales y mantener la consistencia de las rutas, se optó por almacenar datos sensibles en Azure Key Vault junto con Unity Catalog.
 
+## Arquitectura
+
+A continuación se presenta la arquitectura del proyecto, ilustrada en la siguiente imagen:
+
+![Arquitectura del Proyecto](https://imgur.com/YbUe0le.png)
+
+### Descripción de la Arquitectura
+
+La arquitectura del proyecto se compone de varios componentes clave:
+
+1. **Azure Data Factory**:
+   - Orquesta y automatiza los flujos de datos.
+   - Ejecuta los pipelines de ingesta y procesamiento.
+
+2. **Azure Data Lake Storage**:
+   - Almacena los datos en formato crudo (raw) y procesado (processed).
+   - Facilita el almacenamiento y acceso eficiente de grandes volúmenes de datos.
+
+3. **Azure Databricks**:
+   - Procesa los datos utilizando notebooks en PySpark.
+   - Ejecuta los cálculos y análisis de los datos.
+
+4. **Azure Key Vault**:
+   - Gestiona y protege las credenciales y secretos utilizados en el proyecto.
+   - Asegura el acceso seguro a los recursos.
+
+5. **Pipelines de Azure Data Factory**:
+   - **Raw_ingestion**: Ingresa los datos crudos desde la fuente.
+   - **Refined_ingestion**: Procesa y transforma los datos para análisis.
+
+6. **Resultados**:
+   - Los resultados del procesamiento se almacenan en formato Delta en el Data Lake.
+   - Los resultados pueden consultarse directamente desde los notebooks o desde los archivos Delta.
+7. **Logs**:
+   - Los resultados del procesamiento en metricas de tiempo de ejecución y memoria se guardan junto con cada ejecución en la carpeta logs como un archivo .txt
+
+
+## Video Explicativo
+
+En este video, se muestra un tutorial paso a paso del proceso de orquestación y procesamiento de datos.
+
+[![Watch the video](https://img.youtube.com/vi/kcI-SuW4mMY/0.jpg)](https://www.youtube.com/watch?v=kcI-SuW4mMY)
+
+## Modularidad y Parametrización
+
+El proyecto está diseñado de manera modular y parametrizada utilizando Azure Data Factory. Esto significa que cualquier cambio en la fuente de ingesta, por ejemplo, puede realizarse fácilmente desde una variable en la fábrica de datos. Esta configuración permite una gran flexibilidad y adaptabilidad a diferentes fuentes de datos sin necesidad de modificar el código.
+
+## Resultados
+
+Los resultados del procesamiento pueden ser consultados en el print de cada notebook o revisando el archivo Delta guardado en la salida del Data Lake. Para facilitar la consulta, los resultados se listan a continuación:
+
+1. **q1**:
+   - [(datetime.date(2021, 2, 12), 'RanbirS00614606'), (datetime.date(2021, 2, 13), 'MaanDee08215437'), (datetime.date(2021, 2, 17), 'RaaJVinderkaur'), (datetime.date(2021, 2, 16), 'jot__b'), (datetime.date(2021, 2, 14), 'rebelpacifist'), (datetime.date(2021, 2, 18), 'neetuanjle_nitu'), (datetime.date(2021, 2, 15), 'jot__b'), (datetime.date(2021, 2, 20), 'MangalJ23056160'), (datetime.date(2021, 2, 23), 'Surrypuria'), (datetime.date(2021, 2, 19), 'Preetm91')]
+
+2. **q2**:
+   - [('🙏', 7286), ('😂', 3072), ('🚜', 2972), ('🌾', 2363), ('🇮', 2096), ('🇳', 2094), ('🏻', 2080), ('🏽', 1218), ('👇', 1108), ('💚', 1040)]
+
+3. **q3**:
+   - [('@narendramodi', 2261), ('@Kisanektamorcha', 1836), ('@RakeshTikaitBKU', 1639), ('@PMOIndia', 1422), ('@RahulGandhi', 1125), ('@GretaThunberg', 1046), ('@RaviSinghKA', 1015), ('@rihanna', 972), ('@UNHumanRights', 962), ('@meenaharris', 925)]
+
+
 # Guía Paso a Paso del Proceso de Orquestación
 
 ## Pipeline de Orquestación en Azure Data Factory
@@ -138,9 +199,11 @@ Este proceso de orquestación está diseñado para gestionar la ingesta, el proc
 - **Manejo Avanzado de Errores**: Implementar estrategias de reintento y manejo de errores más detalladas para mejorar la robustez del proceso.
 - **Escalado Automático**: Configurar el escalado automático del clúster de Databricks para manejar dinámicamente cargas de trabajo variables y optimizar el costo.
 - **Profiling de Código**: Realizar un profiling detallado del código utilizando herramientas como `PySpark Profiler` para identificar y optimizar partes específicas del código que consumen más recursos.
+- **Ejecución automática**: Una vez se defina la periodicidad de lectura y procesamiento de este ejercicio en un entorno real, puede agendarse mediante un trigger diario o mensual.
+- **Logs avanzados**: Los logs pueden mejorarse para incluir más información y mantener un registro en timestamp o por día, definiendo correctamente el tamaño y coste por almacenamiento.
 
 ---
 
 <p align="center" style="color: #A01F30;">
-  Proyecto realizado por Juan José Afanador
+  Proyecto realizado por Juan José Afanador para LATAM
 </p>
