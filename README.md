@@ -108,6 +108,17 @@ La arquitectura del proyecto se compone de varios componentes clave:
 7. **Logs**:
    - Los resultados del procesamiento en metricas de tiempo de ejecución y memoria se guardan junto con cada ejecución en la carpeta logs como un archivo .txt
 
+# Notebooks del Proyecto
+
+## Enlaces a Notebooks
+
+- [q1_memory](src/databricksNotebooks/q1_memory.py)
+- [q1_time](src/databricksNotebooks/q1_time.py)
+- [q2_memory](src/databricksNotebooks/q2_memory.py)
+- [q2_time](src/databricksNotebooks/q2_time.py)
+- [q3_memory](src/databricksNotebooks/q3_memory.py)
+- [q3_time](src/databricksNotebooks/q3_time.py)
+
 
 ## Video Explicativo
 
